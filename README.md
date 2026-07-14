@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Jira Task Management System
 
 A simple full-stack task management system with user registration, login, and task CRUD operations.
@@ -32,3 +33,6 @@ A simple full-stack task management system with user registration, login, and ta
 - Users only see their own tasks.
 - Tasks automatically move between categories based on status.
 - The database is stored in `database.db`.
+=======
+# Task-Management
+>>>>>>> c0cddd1317a609e39c1ac29176bde2d5ca540dd7
