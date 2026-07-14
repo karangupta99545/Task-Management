@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jira Task Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">Jira Task Manager</div>
+      <div id="auth-section" class="auth-panel"></div>
+      <div class="buttons">
+        <button id="btn-show-login" class="btn-secondary">Login</button>
+        <button id="btn-show-signup" class="btn-secondary">Sign Up</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section id="auth-container" class="auth-container"></section>
+      <section id="app-container" class="app-container hidden">
+        <header class="topbar">
+          <div>
+            <h1>My Tasks</h1>
+            <p>Organize tasks by status and track progress.</p>
+          </div>
+          <div class="header-actions">
+            <button id="btn-logout" class="btn-primary">Logout</button>
+          </div>
+        </header>
+
+        <div class="task-form-card">
+          <form id="task-form" class="task-form">
+            <div class="form-row">
+              <label for="task-title">Title</label>
+              <input id="task-title" name="title" placeholder="Task title" />
+            </div>
+            <div class="form-row">
+              <label for="task-desc">Description</label>
+              <textarea id="task-desc" name="description" placeholder="Describe the task"></textarea>
+            </div>
+            <div class="form-row">
+              <label for="task-status">Status</label>
+              <select id="task-status" name="status">
+                <option>To Do</option>
+                <option>Work In Progress</option>
+                <option>Completed</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Save Task</button>
+              <button id="btn-cancel-edit" type="button" class="btn-secondary hidden">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="task-columns">
+          <div class="task-column">
+            <h2>To Do</h2>
+            <div id="todo-list" class="task-list"></div>
+          </div>
+          <div class="task-column">
+            <h2>Work In Progress</h2>
+            <div id="wip-list" class="task-list"></div>
+          </div>
+          <div class="task-column">
+            <h2>Completed</h2>
+            <div id="completed-list" class="task-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
